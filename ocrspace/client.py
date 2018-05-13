@@ -1,3 +1,4 @@
+from .response import Response
 from io import BytesIO
 from PIL import Image
 from requests import post
@@ -80,7 +81,8 @@ class Client:
 
         response = post("https://api.ocr.space/parse/image", data=data, files={".png": file}).json()
 
+        # Checking for an error.
         if isinstance(response, str):
             raise Exception(f"An error occurred. Message: {response}")
 
-        return response
+        return Response(response)
