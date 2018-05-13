@@ -1,0 +1,8 @@
+
+Pipfile
+
+\.idea/
+
+Pipfile\.lock
+
+tests/
