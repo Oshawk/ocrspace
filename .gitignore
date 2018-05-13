@@ -6,3 +6,5 @@ Pipfile
 Pipfile\.lock
 
 tests/
+
+ocrspace/__pycache__/
